@@ -31,6 +31,7 @@ const modal = ref(false);
     </div>
     <div class="flex flex-row gap-5 flex-wrap p-5">
         <ILoadingBox />
+        <IColorPick />
     </div>
     <div class="flex flex-row gap-5 flex-wrap p-5">
         <IAlertInfo title="info" description="information alert"/>
