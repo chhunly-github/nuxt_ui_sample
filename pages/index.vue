@@ -2,6 +2,7 @@
 
 const date = ref();
 const dateRange = ref({});
+const modal = ref(false);
 </script>
 
 <template>
@@ -19,6 +20,7 @@ const dateRange = ref({});
         <IBtnInfo />
         <IBtnUpdate />
         <IBtnRefresh />
+        <IBtnPrint />
     </div>
     <div class="flex flex-row gap-5 flex-wrap p-5">
         <IInputSearch />
@@ -34,6 +36,11 @@ const dateRange = ref({});
         <IAlertInfo title="info" description="information alert"/>
         <IAlertWarn title="warning" description="warning"/>
         <IAlertError title="error" description="error occurred"/>
+    </div>
+    <div class="flex flex-row gap-5 flex-wrap p-5">
+        <IBtnBasic @click="modal = true" color="teal" label="try dialog"/>
+        <IModal v-model="modal" title="test dialog"/>
+        <IImagePick />
     </div>
 
 </template>

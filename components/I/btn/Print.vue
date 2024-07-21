@@ -10,8 +10,8 @@ withDefaults(defineProps<{
 }>(), {
     size: 'sm',
     variant: 'solid',
-    label: 'Update',
-    icon: 'i-heroicons-clipboard',
+    label: 'Print',
+    icon: 'i-heroicons-printer',
     loading: false,
     disabled: false
 });
@@ -20,12 +20,12 @@ withDefaults(defineProps<{
 <template>
     <UButton
         :size
-        :icon
-        :label
         :variant
+        :label
+        :icon
         :disabled
         :loading
-        color="primary"
+        color="teal"
         @click="$emit('click')"
     />
 </template>

@@ -14,7 +14,8 @@
     "date-fns": "^2.30.0",
     "nuxt": "^3.12.3",
     "v-calendar": "^3.1.2",
-    "vue": "latest"
+    "vue": "latest",
+    "vue-picture-cropper": "^0.7.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
