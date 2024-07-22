@@ -1,29 +1,31 @@
 <script setup lang="ts">
 const colors = [
-    {icon: 'i-heroicons-paint-brush', value: 'white', variant: 'outline'},
-    {icon: ' ', value: 'sky'},
-    {icon: ' ', value: 'teal'},
-    {icon: ' ', value: 'green'},
-    {icon: ' ', value: 'amber'},
-    {icon: ' ', value: 'orange'},
-    {icon: ' ', value: 'red'},
-    {icon: ' ', value: 'purple'},
-    {icon: ' ', value: 'pink'},
+    {icon: 'i-ph-drop-slash', value: 'white', variant: 'outline'},
+    {icon: 'i-ph-drop', value: 'sky'},
+    {icon: 'i-ph-drop', value: 'teal'},
+    {icon: 'i-ph-drop', value: 'green'},
+    {icon: 'i-ph-drop', value: 'amber'},
+    {icon: 'i-ph-drop', value: 'orange'},
+    {icon: 'i-ph-drop', value: 'red'},
+    {icon: 'i-ph-drop', value: 'purple'},
+    {icon: 'i-ph-drop', value: 'pink'},
 ];
 const color = defineModel();
 </script>
 
 <template>
-    <UChip size="3xl" :show="c.value === color" v-for="c in colors" >
-        <template #content>
-            <UIcon name="i-heroicons-check-circle"/>
-        </template>
-        <UButton :icon="c.icon" :color="c.value" label=""
-                 :variant="c.variant ? c.variant : 'solid'"
-                 :ui="{ rounded: 'rounded-full' }"
-                 @click="color = c.value"
-        />
-    </UChip>
+    <div>
+        <UChip size="md" inset class="mr-1" :show="c.value === color" v-for="c in colors" >
+            <template #content>
+                <UIcon name="i-material-symbols-check" />
+            </template>
+            <UButton :icon="c.icon" :color="c.value" label=""
+                     :variant="c.variant ? c.variant : 'solid'"
+                     :ui="{ rounded: 'rounded-full' }"
+                     @click="color = c.value"
+            />
+        </UChip>
+    </div>
 </template>
 
 <style scoped>
