@@ -1,20 +1,17 @@
 <template>
     <NuxtRouteAnnouncer/>
-    <UContainer>
-        <UCard>
-            <template #header>
-                <div class="flex justify-between">
-                    <h1>Welcome to Nuxt UI Starter</h1>
-                    <ColorScheme>
-                        <USelect v-model="$colorMode.preference" :options="['system', 'light', 'dark']"/>
-                    </ColorScheme>
-                </div>
-            </template>
-            <NuxtPage/>
-            <UButton icon="i-heroicons-book-open" to="https://ui.nuxt.com" target="_blank">Open Nuxt UI Documentation
-            </UButton>
-        </UCard>
-    </UContainer>
+    <div
+        class="fixed w-full h-full saturate-200 bg-repeat-x bg-center"
+        style="background-image: url(/assets/background2.jpg); opacity: 0.2"
+    ></div>
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
+
 </template>
 <script setup lang="ts">
 </script>
+
+<style>
+
+</style>

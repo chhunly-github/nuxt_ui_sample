@@ -32,6 +32,8 @@ const modal = ref(false);
     <div class="flex flex-row gap-5 flex-wrap p-5">
         <ILoadingBox />
         <IColorPick />
+        <IColorPick />
+        <IColorPick />
     </div>
     <div class="flex flex-row gap-5 flex-wrap p-5">
         <IAlertInfo title="info" description="information alert"/>
@@ -42,6 +44,18 @@ const modal = ref(false);
         <IBtnBasic @click="modal = true" color="teal" label="try dialog"/>
         <IModal v-model="modal" title="test dialog"/>
         <IImagePick />
+
+    </div>
+    <div class="flex flex-row gap-5 flex-wrap p-5">
+        <IAlertInfo title="info" description="information alert"/>
+        <IAlertWarn title="warning" description="warning"/>
+        <IAlertError title="error" description="error occurred"/>
+    </div>
+    <div class="flex flex-row gap-5 flex-wrap p-5">
+        <IBtnBasic @click="modal = true" color="teal" label="try dialog"/>
+        <IModal v-model="modal" title="test dialog"/>
+        <IImagePick />
+
     </div>
 
 </template>
