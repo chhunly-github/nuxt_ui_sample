@@ -21,41 +21,24 @@ const modal = ref(false);
         <IBtnUpdate />
         <IBtnRefresh />
         <IBtnPrint />
-    </div>
-    <div class="flex flex-row gap-5 flex-wrap p-5">
         <IInputSearch />
         <IInputText />
         <IInputFull />
         <IInputNumber />
         <IInputSearchMenu />
-    </div>
-    <div class="flex flex-row gap-5 flex-wrap p-5">
         <ILoadingBox />
         <IColorPick />
-        <IColorPick />
-        <IColorPick />
     </div>
     <div class="flex flex-row gap-5 flex-wrap p-5">
-        <IAlertInfo title="info" description="information alert"/>
-        <IAlertWarn title="warning" description="warning"/>
-        <IAlertError title="error" description="error occurred"/>
-    </div>
-    <div class="flex flex-row gap-5 flex-wrap p-5">
+        <IAlertInfo title="info" description="information alert" class="w-56"/>
+        <IAlertWarn title="warning" description="warning" class="w-56"/>
+        <IAlertError title="error" description="error occurred" class="w-56"/>
         <IBtnBasic @click="modal = true" color="teal" label="try dialog"/>
         <IModal v-model="modal" title="test dialog"/>
         <IImagePick />
-
     </div>
     <div class="flex flex-row gap-5 flex-wrap p-5">
-        <IAlertInfo title="info" description="information alert"/>
-        <IAlertWarn title="warning" description="warning"/>
-        <IAlertError title="error" description="error occurred"/>
-    </div>
-    <div class="flex flex-row gap-5 flex-wrap p-5">
-        <IBtnBasic @click="modal = true" color="teal" label="try dialog"/>
-        <IModal v-model="modal" title="test dialog"/>
-        <IImagePick />
-
+        <UIcon v-for="i in Object.keys(useIcon())" :name="useIcon()[i]" class="h-6 w-6"/>
     </div>
 
 </template>

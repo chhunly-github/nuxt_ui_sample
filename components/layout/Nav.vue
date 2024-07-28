@@ -47,7 +47,10 @@ const links = [
             wrapper: 'bg-primary-100 dark:bg-primary-950 rounded-lg',
             base: 'flex-col',
             active: 'text-gray-900 dark:text-white before:bg-primary-400 dark:before:bg-primary-600/50',
-            inactive: 'dark:text-primary-600 hover:text-primary-600 hover:bg-primary dark:hover:text-white hover:before:bg-primary-300 dark:hover:before:bg-gray-800/75',
+            inactive: 'dark:text-gray-400 hover:text-primary-600 hover:bg-primary dark:hover:text-white hover:before:bg-primary-300 dark:hover:before:bg-gray-800/75',
+            icon: {
+                inactive: 'dark:text-primary-800 group-hover:text-gray-700 dark:group-hover:text-gray-200',
+            },
             badge: {
                 base: 'absolute right-0 rounded',
                 variant: 'soft',
