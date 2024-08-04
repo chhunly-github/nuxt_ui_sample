@@ -39,11 +39,6 @@
                                 aspectRatio: ratio,
                                 cropBoxResizable: true,
                               }"
-                    :presetMode="{
-                                mode: 'fixedSize', //'round',
-                                width: 100,
-                                height: 100,
-                            }"
                 />
                 <template #footer >
                     <div class="flex justify-between">
@@ -68,7 +63,9 @@ const result = reactive({
     blobURL: '',
 });
 withDefaults(defineProps<{
-    ratio?: number
+    ratio?: number,
+    width: number,
+    height: number,
 }>(), {
     ratio: 4/3
 });
@@ -119,6 +116,13 @@ async function getResult() {
     console.log({base64, blob, file})
     result.dataURL = base64
     result.blobURL = URL.createObjectURL(blob)
+    const formData = new FormData();
+    formData.append('file', blob);
+    const resultUpload = await $fetch('/api/assets', {
+        method: 'post',
+        body: formData
+    });
+    console.log(resultUpload)
     isShowModal.value = false
 }
 </script>
