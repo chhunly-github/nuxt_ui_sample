@@ -64,8 +64,8 @@ const result = reactive({
 });
 withDefaults(defineProps<{
     ratio?: number,
-    width: number,
-    height: number,
+    width?: number,
+    height?: number,
 }>(), {
     ratio: 4/3
 });
