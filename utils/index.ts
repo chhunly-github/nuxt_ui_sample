@@ -7,4 +7,7 @@ export const formatNumber = (
         notation: notation,
         maximumFractionDigits: fractionDigits
     }).format(value)
+};
+export const removeBlankObj = (obj: any): any => {
+    return Object.fromEntries(Object.entries(obj).filter(([_, v]) => v != null));
 }
