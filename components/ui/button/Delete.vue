@@ -3,8 +3,6 @@ import type {ButtonProp} from "~/components/ui/types";
 
 defineEmits(['click']);
 withDefaults(defineProps<ButtonProp>(), {
-    size: 'sm',
-    variant: 'solid',
     label: 'Delete',
     icon: 'i-heroicons-trash',
     loading: false,

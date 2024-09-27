@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    <UInput type="number" variant="outline" placeholder="value as number" />
+    <UInput type="number" placeholder="value as number" />
 </template>

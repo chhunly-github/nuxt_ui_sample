@@ -14,8 +14,6 @@ const view = computed(() => {
 	<UPopover :popper="{ placement: 'bottom-start' }">
 		<UInput
 			leading-icon="i-heroicons-calendar-days-20-solid"
-			size="md"
-			variant="outline"
 			:model-value="view"
 			:ui="{
 					base: 'hover:cursor-pointer'

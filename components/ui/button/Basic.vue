@@ -9,10 +9,6 @@ withDefaults(defineProps<{
     loading?: boolean,
     disabled?: boolean
 }>(), {
-    size: 'sm',
-    variant: 'solid',
-    label: '',
-    icon: '',
     color: 'primary',
     loading: false,
     disabled: false

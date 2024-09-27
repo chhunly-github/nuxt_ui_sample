@@ -44,8 +44,6 @@ const view = (date: Date, alias: string = 'dd/mm/yy') => {
 		<UPopover :popper="{ placement: 'bottom-start' }">
 			<UInput
 				leading-icon="i-heroicons-calendar-days-20-solid"
-				size="md"
-				variant="outline"
 				:model-value="`${view(model.start)} - ${view(model.end)}`"
 				:ui="{
 					base: 'hover:cursor-pointer'

@@ -3,5 +3,5 @@
 </script>
 
 <template>
-    <UInput variant="outline" placeholder="Search..." />
+    <UInput placeholder="Search..." />
 </template>
